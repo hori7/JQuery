@@ -18,8 +18,9 @@ $(function(){
     $("#test2").hide();
   });
 
-  $('#test3').before('<h1>before</h1>');
-  $('#test3').after('<h1>after</h1>');
+  //beforeAfter
+  $('#test1').before('<h1>before</h1>');
+  $('#test1').after('<h1>after</h1>');
 
   var scroll;
   $(window).scroll(function() {
@@ -31,6 +32,7 @@ $(function(){
     $("h1").css("color","blue")
   });
 
+  //animation
   $("#fadeOut").on("click", function(){
     $("h1").fadeOut();
   });
@@ -46,5 +48,15 @@ $(function(){
   $("#slideDown").on("click", function(){
     $("h1").slideDown();
   });
+
+  $("#opacity").on("click", function(){
+    $("h1").animate({opacity: 0.3});
+  });
+
+  $("#fontsize").on("click", function(){
+    $("h1").animate({fontSize:'100px'}, 2000).animate({fontSize:'30px'});
+  });
+
+  $("h1").animate({opacity: 0.2}).fadeOut().fadeIn().slideUp().slideDown().animate({opacity: 1});
 
 });
