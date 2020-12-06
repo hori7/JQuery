@@ -58,4 +58,10 @@ $(function(){
     scroll = $(this).scrollTop();
     $("#scroll-position").text(scroll);
   });
+
+  //scrollTop
+  $('#top').click(function() {
+    $('html').animate({scrollTop: 0});
+  })
+
 });
