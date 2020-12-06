@@ -16,6 +16,9 @@ $(function(){
     $("#test2").hide();
   });
 
+  $('#test3').before('<h1>before</h1>');
+  $('#test3').after('<h1>after</h1>');
+
   var scroll;
   $(window).scroll(function() {
     scroll = $(this).scrollTop();
