@@ -1,15 +1,19 @@
 $(function(){
-
+  //text, remove
   $("#test1").text("hello");
-  $('h1').css('color','red');
-
   $('#remove').remove();
 
+  //css
+  $('h1').css('color','red');
 
   $("#btn").click(function() {
     $("body").css("background", "#ffff00");
   });
+  $("body").keypress(function(){
+    $("h1").css("color","blue")
+  });
 
+  //showHide
   $("#test2").hide();
   $("#btn2").on("click", function(){
     $("#test2").show();
@@ -21,16 +25,6 @@ $(function(){
   //beforeAfter
   $('#test1').before('<h1>before</h1>');
   $('#test1').after('<h1>after</h1>');
-
-  var scroll;
-  $(window).scroll(function() {
-    scroll = $(this).scrollTop();
-    $("#scroll-position").text(scroll);
-  });
-
-  $("body").keypress(function(){
-    $("h1").css("color","blue")
-  });
 
   //animation
   $("#fadeOut").on("click", function(){
@@ -59,4 +53,9 @@ $(function(){
 
   $("h1").animate({opacity: 0.2}).fadeOut().fadeIn().slideUp().slideDown().animate({opacity: 1});
 
+  var scroll;
+  $(window).scroll(function() {
+    scroll = $(this).scrollTop();
+    $("#scroll-position").text(scroll);
+  });
 });
