@@ -3,6 +3,8 @@ $(function(){
   $("#test1").text("hello");
   $('h1').css('color','red');
 
+  $('#remove').remove();
+
 
   $("#btn").click(function() {
     $("body").css("background", "#ffff00");
