@@ -29,6 +29,22 @@ $(function(){
 
   $("body").keypress(function(){
     $("h1").css("color","blue")
- });
+  });
+
+  $("#fadeOut").on("click", function(){
+    $("h1").fadeOut();
+  });
+
+  $("#fadeIn").on("click", function(){
+    $("h1").fadeIn();
+  });
+
+  $("#slideUp").on("click", function(){
+    $("h1").slideUp();
+  });
+
+  $("#slideDown").on("click", function(){
+    $("h1").slideDown();
+  });
 
 });
